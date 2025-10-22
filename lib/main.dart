@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   State<MainPage> createState() => _MainPageState();
 }
@@ -57,6 +61,8 @@ class _MainPageState extends State<MainPage> {
 // ホーム画面
 //
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -228,6 +234,8 @@ class _HomePageState extends State<HomePage> {
 // ポイント交換画面
 //
 class PointExchangePage extends StatefulWidget {
+  const PointExchangePage({super.key});
+
   @override
   State<PointExchangePage> createState() => _PointExchangePageState();
 }
@@ -264,7 +272,7 @@ class _PointExchangePageState extends State<PointExchangePage> {
 
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content:
-          Text("「$fromCompany」から「$toCompany」に${amount}ポイントを交換しました！"),
+          Text("「$fromCompany」から「$toCompany」に$amountポイントを交換しました！"),
     ));
     _resetSelection();
   }
@@ -375,6 +383,8 @@ class _PointExchangePageState extends State<PointExchangePage> {
 // マイページ
 //
 class MyPage extends StatelessWidget {
+  const MyPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
